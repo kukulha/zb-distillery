@@ -1,0 +1,254 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700');
+
+// Normalize.css
+@import '~normalize.css/normalize';
+// Materialize
+@import '~materialize-css/dist/css/materialize.min';
+@import '~materialize-tags/dist/css/materialize-tags.min';
+
+
+
+*{
+	font-family: 'Source Serif Pro', serif;
+}
+header.fixed, main.fixed, footer.fixed {
+      padding-left: 300px;
+    }
+
+    @media only screen and (max-width : 992px) {
+      header.fixed, main.fixed, footer.fixed {
+        padding-left: 0;
+      }
+    }
+.fixed{
+      padding-left: 300px;
+    }    
+.fondo{
+	background: linear-gradient(-90deg, rgba(255,226,207,1) 15.7%, rgba(255,255,255,1) 100%);
+}
+//Fondos
+.disclaimer{
+	background: url('/img/disclaimer.jpg') no-repeat top center;
+	background-size: cover;
+	background-attachment: cover;
+	height: 100vh;
+	width: 100vw;
+}
+.video{
+	background:url('/video/fondo.mp4') no-repeat bottom center;
+	background-size: cover;
+	background-attachment: cover;
+	height: 100vh;
+	width: 100vw;
+	margin-top: -64px;
+}
+.hero{
+	background:url('/img/hero.jpg') no-repeat bottom center;
+	background-size: cover;
+	background-attachment: cover;
+	height: 100vh;
+	width: 100vw;
+}
+.hero2{
+	background:url('/img/hero2.jpg') no-repeat center left;
+	background-size: cover;
+	background-attachment: cover;
+	height: auto;
+	width: 100vw;
+}
+.hero3{
+	background:url('/img/hero3.jpg') no-repeat center left;
+	background-size: cover;
+	background-attachment: cover;
+	height: 100vh;
+	width: 100vw;
+	margin-top: -64px;
+}
+.hero4{
+	background:url('/img/hero4.jpg') no-repeat center left;
+	background-size: cover;
+	background-attachment: cover;
+	height: 100vh;
+	width: 100vw;
+	margin-top: -64px;
+}
+.deg{
+	background:url('/img/grecas.png') no-repeat top center;
+	background-size: cover;
+	background-attachment: cover;
+	height: auto;
+	width: 100vw;
+}
+.deg2{
+	background:url('/img/grecas2.png') no-repeat bottom center;
+	background-size: cover;
+	background-attachment: cover;
+	height: auto;
+	width: 100vw;
+}
+.banner{
+	background:url('/img/banner.jpg') no-repeat center center;
+	background-size: cover;
+	background-attachment: cover;
+	height: auto;
+	width: 100vw;
+}
+.banner2{
+	background:url('/img/banner2.jpg') no-repeat top center;
+	background-size: cover;
+	background-attachment: cover;
+	height: 400px;
+	width: 100vw;
+}
+
+//Tipografias
+h1{
+	font-size: 4rem;
+}
+h2{
+	font-size: 3rem;
+}
+h3{
+	font-size: 1.5rem;
+}
+.justify{
+	text-align: justify;
+}
+.bold{
+	font-weight: 700;
+}
+.title{
+	text-transform: uppercase;
+}
+.small{
+	font-size: .8rem;
+}
+
+//Helpers
+.valign-wrapper{
+	height: 100vh;
+}
+.border{
+	display: inline-block;
+	padding:  15px 30px;
+	margin: 5px;
+	border: 1px solid #af844c;
+	color: white;
+	font-weight: 700;
+	font-size: 1.1rem;
+}
+.slogan{
+	margin-top: -25px;
+	position: absolute;
+	top: 0;
+	right: 25%;
+	color: white;
+}
+.slogan h1{
+	font-size: 2.2rem;
+}
+.slogan h2{
+	margin-top: -20px;
+	font-size: 1.5rem;
+}
+.leyendas{
+	position: absolute;
+	bottom:0;
+	left: 5%;
+}
+.leyendas a{
+	display: block;
+}
+.esconder{
+	margin-left: -100%;
+	transition: all 1s ease;
+}
+.mostrar{
+	margin-left: 0;
+	transition: all 1s ease;
+	z-index: 5000;
+}
+.menu{
+	position: absolute;
+	top: 0;
+	left: 5%;
+	z-index: 6000;
+}
+.menu a{
+	cursor: pointer;
+}
+#menu{
+	z-index: 4000;
+}
+.card{
+	transition: all .5s ease;
+}
+.card:hover{
+	transform: scale(1.05);
+}
+.overflow{
+	overflow-y: hidden;
+}
+//Colores
+
+.dorado{
+	background:#af844c !important;
+}
+.dorado-text{
+	color:#af844c !important;
+}
+.cafe{
+	background:#42210b !important;
+}
+.cafe-text{
+	color: #42210b !important;
+}
+.doble{
+	border-bottom: 5px double #3e2723;
+}
+.negro{
+	background: rgba(0,0,0,.7) !important;
+}
+
+//medias
+@media screen and (min-width: 600px) {
+
+	.video{
+		background:url('/video/fondo.mp4') no-repeat bottom center;
+		background-size: cover;
+		background-attachment: cover;
+		height: 100vh;
+		width: 100vw;
+		margin-top: -64px;
+	}
+	h3{
+		font-size: 3.5rem;
+	}
+	.h1{
+		font-size: 5rem;
+	}
+	.slogan{
+		position: absolute;
+		top: 0;
+		right: 5%;
+	}
+	.ml-1{
+	margin-left: -80px !important;
+	}
+	.m-t-1{
+		margin-top: 100px !important;
+	}
+	.m-t-2{
+		margin-top: 200px !important;
+	}
+	.mt-2{
+		margin-top: -25px !important;
+	}
+	.mt-4{
+		margin-top: -200px !important;
+	}
+	.m-b-1{
+		margin-bottom: 100px;
+	}
+}
