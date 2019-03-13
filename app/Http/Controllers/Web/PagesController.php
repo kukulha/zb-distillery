@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use App\Http\Controllers\Controller;
 use App\Post;
 use App\Category;
@@ -22,7 +23,11 @@ class PagesController extends Controller
 
     public function index()
     {
-    	$posts = Post::orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(3);
+        $key =  "posts" ;
+
+        $posts = Cache::rememberForever($key, now()->addMinutes(10), function(){
+            return Post::with(['user'])->orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(3);
+        });
     	return view('index', compact('posts'));
     }
     public function zb()
@@ -31,7 +36,11 @@ class PagesController extends Controller
     }
     public function blog()
     {
-    	$posts = Post::orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(12);
+        $key =  "posts.page." . request('page', 1);
+
+        $posts = Cache::remember($key, now()->addMinutes(10), function(){
+            return Post::with(['user'])->orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(12);
+        });
     	return view('web.posts', compact('posts'));
     }
     public function post($slug)
