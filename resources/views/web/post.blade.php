@@ -34,8 +34,9 @@
             "name": "{{ $post->name }}",
             "headline": "{{ $post->name }}",
             "url": "http://www.zbdistillery.com/blog/{{ $post->slug }}",
-            "image": "{{ $post->file }}",
+            "image": "http://zbdistillery.com{{ Storage::url($post->file) }}",
             "description" : "{{ $post->excerpt }}",
+            "keywords" : "@foreach($post->tags as $tag) {{ $tag->name }} @endforeach",
             "author": {
 				"@type": "Person",
 				"name" : "{{ $post->user->name }}"
@@ -63,7 +64,7 @@
 		<article class="section container">
 			<div class="row">
 				<div class="col  s12">
-					<img src="{{ $post->file }}" class="responsive-img" alt="">
+					<img src="{{ Storage::url($post->file) }}" class="responsive-img" alt="">
 					<div class="center">
 						<h2 class="cafe-text title doble">{{ $post->name }}</h2>
 						<p class="small dorado-text title">Autor: {{ $post->user->name }}</p>
