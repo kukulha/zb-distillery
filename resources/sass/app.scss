@@ -5,25 +5,27 @@
 @import '~normalize.css/normalize';
 // Materialize
 @import '~materialize-css/dist/css/materialize.min';
-@import '~materialize-tags/dist/css/materialize-tags.min';
+@import '~materialize-tags/dist/css/materialize-tags';
 
 
 
 *{
 	font-family: 'Source Serif Pro', serif;
 }
+
+
 header.fixed, main.fixed, footer.fixed {
-      padding-left: 300px;
+    	padding-left: 300px;
     }
 
     @media only screen and (max-width : 992px) {
-      header.fixed, main.fixed, footer.fixed {
-        padding-left: 0;
-      }
+		header.fixed, main.fixed, footer.fixed {
+			padding-left: 0;
+		}
     }
 .fixed{
-      padding-left: 300px;
-    }    
+    padding-left: 300px;
+}    
 .fondo{
 	background: linear-gradient(-90deg, rgba(255,226,207,1) 15.7%, rgba(255,255,255,1) 100%);
 }
@@ -36,12 +38,12 @@ header.fixed, main.fixed, footer.fixed {
 	width: 100vw;
 }
 .video{
-	background:url('/video/fondo.mp4') no-repeat bottom center;
+	background:url('/img/hero-movil.jpg') no-repeat bottom center;
 	background-size: cover;
 	background-attachment: cover;
 	height: 100vh;
 	width: 100vw;
-	margin-top: -64px;
+	margin-top: -56px;
 }
 .hero{
 	background:url('/img/hero.jpg') no-repeat bottom center;

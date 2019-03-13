@@ -1,12 +1,60 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta charset="utf-8">
+
+	<!--SEO Organico -->  
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <title>{{ config('app.name', 'Laravel') }}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="author" content="www.kukulha.com">
+    <meta name="designer" content="www.kukulha.com">
+    <!-- GOOGLE SEO -->    
+    <meta name="robots" content="index,follow" />
+    <meta name="geo.region" content="MX" />
+    <meta name="keywords" content="">
+    <meta name="description" content="Somos una empresa joven con la mirada puesta en los campos de agave, el inicio que marca el proceso de hacer un buen tequila">
+    <!--SEO Twitter -->    
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:title" content="ZB Distillery">
+    <meta property="twitter:description" content="Somos una empresa joven con la mirada puesta en los campos de agave, el inicio que marca el proceso de hacer un buen tequila">
+    <meta property="twitter:url" content="{{ Request::url()}}">
+    <meta property="twitter:image" content="http://www.zbdistillery.com/favicon.ico">
+    <meta property="twitter:creator" content="@Kukulha">
+    
+
+    <!--SEO Facebook -->    
+    <meta property="og:title" content="ZB Distillery">
+    <meta property="og:description" content="Somos una empresa joven con la mirada puesta en los campos de agave, el inicio que marca el proceso de hacer un buen tequila">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ Request::url()}}">
+    <meta property="og:image" content="http://zbdistillery.com/favicon.ico">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:site_name" content="{{ config('app.name', 'Laravel') }}">
+
+    <!--Schema.org-->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org/",
+            "@type": "LocalBusiness",
+            "name": "ZB Distillery",
+            "url": "http://www.zbdistillery.com",
+            "image": "http://zbdistillery.com/img/logo.png",
+            "description" : "Somos una empresa joven con la mirada puesta en los campos de agave, el inicio que marca el proceso de hacer un buen tequila",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Tepatitlán",
+                "addressRegion": "JC",
+                "postalCode": "47700",
+                "streetAddress": "Carretera Tepa-Arandas Kilómetro 4.5, Rancho Las Peñitas"
+            },
+            "telephone": "+52 013787010112"
+        }
+    </script>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }} Hagamos Tequila ZB</title>
+    
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>

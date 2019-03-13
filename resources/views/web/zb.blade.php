@@ -1,4 +1,50 @@
 @extends('layouts.app')
+@section('title')
+Una destileria con Historia
+@endsection
+
+@section('seo')
+
+	<meta name="keywords" content="">
+    <meta name="description" content="En ZB Distillery contamos con la capacidad productiva de 4 millones de litros anuales, para esto nuestra cadena de suministros ha sido detallada, logrado con esto una mejor producción y productos de mayor calidad.a">
+    <!--SEO Twitter -->    
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:title" content="ZB Distillery">
+    <meta property="twitter:description" content="En ZB Distillery contamos con la capacidad productiva de 4 millones de litros anuales, para esto nuestra cadena de suministros ha sido detallada, logrado con esto una mejor producción y productos de mayor calidad.">
+    <meta property="twitter:url" content="{{ Request::url()}}">
+    <meta property="twitter:image" content="http://www.zbdistillery.com/favicon.ico">
+    <meta property="twitter:creator" content="@Kukulha">
+    
+
+    <!--SEO Facebook -->    
+    <meta property="og:title" content="ZB Distillery">
+    <meta property="og:description" content="En ZB Distillery contamos con la capacidad productiva de 4 millones de litros anuales, para esto nuestra cadena de suministros ha sido detallada, logrado con esto una mejor producción y productos de mayor calidad.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ Request::url()}}">
+    <meta property="og:image" content="http://zbdistillery.com/favicon.ico">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:site_name" content="{{ config('app.name', 'Laravel') }}">
+
+    <!--Schema.org-->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org/",
+            "@type": "LocalBusiness",
+            "name": "ZB Distillery",
+            "url": "http://www.zbdistillery.com",
+            "image": "http://zbdistillery.com/img/logo.png",
+            "description" : "En ZB Distillery contamos con la capacidad productiva de 4 millones de litros anuales, para esto nuestra cadena de suministros ha sido detallada, logrado con esto una mejor producción y productos de mayor calidad.",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Tepatitlán",
+                "addressRegion": "JC",
+                "postalCode": "47700",
+                "streetAddress": "Carretera Tepa-Arandas Kilómetro 4.5, Rancho Las Peñitas"
+            },
+            "telephone": "+52 013787010112"
+        }
+    </script> 
+@endsection
 
 @section('links')
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
@@ -73,7 +119,7 @@
 		<div class="center container section">
 			<p class="white-text">En <span class="bold">ZB Distillery</span> contamos con la capacidad productiva de 4 millones de litros anuales, para esto nuestra cadena de suministros ha sido detallada, logrado con esto una mejor producción y productos de mayor calidad.</p>
 		</div>
-		<div class="row container">
+		<div class="row container fadeInLeft">
 			<div class="col m4 s12">
 				<a data-fancybox="gallery" href="/img/gallery1b.jpg" data-caption=""><img src="/img/gallery1.jpg" class="responsive-img" alt=""></a>
 			</div>
@@ -109,4 +155,13 @@
 @section('scripts')
 	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+	<script src="https://unpkg.com/scrollreveal"></script>
+	<script>
+	 	//Efectos
+	ScrollReveal().reveal('.fadeInLeft', {easing: 'ease', delay: 800, interval: 3200, origin: 'left', distance: '400px'});
+	ScrollReveal().reveal('.fadeInRight', {easing: 'ease', delay: 800, interval: 3200, origin: 'right', distance: '400px'});
+	ScrollReveal().reveal('.fadeInTop', {easing: 'ease', delay: 800, interval: 1200, origin: 'top', distance: '400px'});
+	ScrollReveal().reveal('.fadeInBottom', {easing: 'ease', delay: 500, interval: 2500, origin: 'bottom', distance: '400px'});
+	ScrollReveal().reveal('.fadeIn', {easing: 'ease-out', delay: 1000, interval: 5000});
+	 </script>
 @endsection

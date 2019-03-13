@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <!--SEO Organico -->  
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
     <title>{{ config('app.name', 'Laravel') }} || @yield('title')</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="author" content="www.kukulha.com">
+    <meta name="designer" content="www.kukulha.com">
+    <!-- GOOGLE SEO -->    
+    <meta name="robots" content="index,follow" />
+    <meta name="geo.region" content="MX" />
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
+    @yield('seo')
 
-    <!-- Fonts -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     @yield('links')
@@ -86,6 +87,8 @@
             </div>
         </div>
     </footer>
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" async></script>
     @yield('scripts')
 
 </body>

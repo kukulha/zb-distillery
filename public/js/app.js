@@ -36636,43 +36636,8 @@ $(document).ready(function () {
   }); //Materialize
 
   $('.scrollspy').scrollSpy();
-  $('.parallax').parallax();
   $('.sidenav').sidenav();
-  $('input#excerpt').characterCounter(); //Efectos
-
-  ScrollReveal().reveal('.fadeInLeft', {
-    easing: 'ease',
-    delay: 800,
-    interval: 3200,
-    origin: 'left',
-    distance: '400px'
-  });
-  ScrollReveal().reveal('.fadeInRight', {
-    easing: 'ease',
-    delay: 800,
-    interval: 3200,
-    origin: 'right',
-    distance: '400px'
-  });
-  ScrollReveal().reveal('.fadeInTop', {
-    easing: 'ease',
-    delay: 800,
-    interval: 1200,
-    origin: 'top',
-    distance: '400px'
-  });
-  ScrollReveal().reveal('.fadeInBottom', {
-    easing: 'ease',
-    delay: 500,
-    interval: 2500,
-    origin: 'bottom',
-    distance: '400px'
-  });
-  ScrollReveal().reveal('.fadeIn', {
-    easing: 'ease-out',
-    delay: 1000,
-    interval: 5000
-  });
+  $('input#excerpt').characterCounter();
 });
 
 /***/ }),

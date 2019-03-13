@@ -1,5 +1,52 @@
 @extends('layouts.app')
 
+@section('title')
+	Hagamos Tequila ZB
+@endsection
+
+@section('seo')
+
+	<meta name="keywords" content="">
+    <meta name="description" content="Somos una empresa joven con la mirada puesta en los campos de agave, el inicio que marca el proceso de hacer un buen tequila">
+    <!--SEO Twitter -->    
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:title" content="ZB Distillery">
+    <meta property="twitter:description" content="Somos una empresa joven con la mirada puesta en los campos de agave, el inicio que marca el proceso de hacer un buen tequila">
+    <meta property="twitter:url" content="{{ Request::url()}}">
+    <meta property="twitter:image" content="http://www.zbdistillery.com/favicon.ico">
+    <meta property="twitter:creator" content="@Kukulha">
+    
+
+    <!--SEO Facebook -->    
+    <meta property="og:title" content="ZB Distillery">
+    <meta property="og:description" content="Somos una empresa joven con la mirada puesta en los campos de agave, el inicio que marca el proceso de hacer un buen tequila">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ Request::url()}}">
+    <meta property="og:image" content="http://zbdistillery.com/favicon.ico">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:site_name" content="{{ config('app.name', 'Laravel') }}">
+
+    <!--Schema.org-->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org/",
+            "@type": "LocalBusiness",
+            "name": "ZB Distillery",
+            "url": "http://www.zbdistillery.com",
+            "image": "http://zbdistillery.com/img/logo.png",
+            "description" : "Somos una empresa joven con la mirada puesta en los campos de agave, el inicio que marca el proceso de hacer un buen tequila",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Tepatitlán",
+                "addressRegion": "JC",
+                "postalCode": "47700",
+                "streetAddress": "Carretera Tepa-Arandas Kilómetro 4.5, Rancho Las Peñitas"
+            },
+            "telephone": "+52 013787010112"
+        }
+    </script> 
+@endsection
+
 @section('content')  
 <main class="fondo">
 	<div class="video scrollspy">
@@ -7,7 +54,7 @@
 			<div class="container">
 				<div class="row fadeInBottom">
 					<div class="col m6 offset-m3 s12">
-						<img src="/img/logo.png" class="responsive-img" alt="">
+						<img src="/img/logo.png" class="responsive-img" width="450px" alt="">
 					</div>
 				</div>
 			</div>
@@ -114,4 +161,16 @@
 	</div>
 </main>
 
+@endsection
+
+@section('scripts')
+	 <script src="https://unpkg.com/scrollreveal"></script>
+	 <script>
+	 	//Efectos
+	ScrollReveal().reveal('.fadeInLeft', {easing: 'ease', delay: 800, interval: 3200, origin: 'left', distance: '400px'});
+	ScrollReveal().reveal('.fadeInRight', {easing: 'ease', delay: 800, interval: 3200, origin: 'right', distance: '400px'});
+	ScrollReveal().reveal('.fadeInTop', {easing: 'ease', delay: 800, interval: 1200, origin: 'top', distance: '400px'});
+	ScrollReveal().reveal('.fadeInBottom', {easing: 'ease', delay: 500, interval: 2500, origin: 'bottom', distance: '400px'});
+	ScrollReveal().reveal('.fadeIn', {easing: 'ease-out', delay: 1000, interval: 5000});
+	 </script>
 @endsection
