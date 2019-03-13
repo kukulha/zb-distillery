@@ -4,10 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Conner\Tagging\Taggable;
+use App\Traits\DateTranslator;
 
 class Post extends Model
 {
-    use Taggable;
+    use Taggable, DateTranslator;
     
     protected $fillable = [
     	'user_id', 'category_id', 'name', 'slug', 'excerpt', 'body', 'status', 'file'

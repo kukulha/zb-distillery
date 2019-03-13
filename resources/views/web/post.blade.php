@@ -68,7 +68,7 @@
 					<div class="center">
 						<h2 class="cafe-text title doble">{{ $post->name }}</h2>
 						<p class="small dorado-text title">Autor: {{ $post->user->name }}</p>
-						<p class="small dorado-text title">Fecha: {{ $post->created_at->diffForHumans() }}</p>
+						<p class="small dorado-text title">Fecha: {{ $post->created_at->format('l d \d\e F Y, g:i a') }}</p>
 						<p class="small dorado-text title">Categoria: {{ $post->category->name }}</p>
 						<p class="small dorado-text title">Etiquetas: 
 							@forelse($post->tags as $tag)
