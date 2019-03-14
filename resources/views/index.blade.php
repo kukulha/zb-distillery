@@ -62,7 +62,7 @@
 	</div>
 
 
-	<div class="hero scrollspy">
+	<div class="hero section">
 		<div class="valign-wrapper">
 			<div class="container center">
 				<h2 class="title white-text">Hagamos <br><span class="bold">tequila zb</span></h2>
@@ -78,7 +78,7 @@
 		</div>
 	</div>
 
-	<div class="black section scrollspy">
+	<div class="black section">
 			<div class="container">
 			<div class="row">
 				
